@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/andreyhitoshi1997/vdt-season1-marvel-api#readme",
   "devDependencies": {
+    "@bahmutov/cy-api": "^2.2.0",
     "cypress": "^10.9.0"
   }
 }
