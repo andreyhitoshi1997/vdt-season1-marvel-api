@@ -1,14 +1,14 @@
-describe("POST /characters", () => {
+describe('POST /characters', () => {
   before(() => {
     cy.back2ThePast();
     cy.setToken();
   });
 
-  it("deve cadastrar um personagem", () => {
+  it('deve cadastrar um personagem', () => {
     const character = {
-      name: "Professor Xavier",
-      alias: "Professor X",
-      team: ["X-men", "illuminatis"],
+      name: 'Professor Xavier',
+      alias: 'Professor X',
+      team: ['X-men', 'illuminatis'],
       active: true,
     };
 
@@ -20,11 +20,11 @@ describe("POST /characters", () => {
       })
   });
 
-  context("quando o personagem ja existe", () => {
+  context('quando o personagem ja existe', () => {
     const character = {
-      name: "Pietro Maximoff",
-      alias: "Professor X",
-      team: ["Vingadores Costa Oeste", "Irmandade dos mutantes"],
+      name: 'Pietro Maximoff',
+      alias: 'Professor X',
+      team: ['Vingadores Costa Oeste', 'Irmandade dos mutantes'],
       active: true,
     };
 
@@ -35,11 +35,11 @@ describe("POST /characters", () => {
       });
     });
 
-    it("não deve cadastrar duplicado", () => {
+    it('não deve cadastrar duplicado', () => {
       cy.postCharacter(character)
       .then((response) => {
         expect(response.status).to.eql(400);
-        expect(response.body.error).to.eql("Duplicate character");
+        expect(response.body.error).to.eql('Duplicate character');
       });
     });
   });
