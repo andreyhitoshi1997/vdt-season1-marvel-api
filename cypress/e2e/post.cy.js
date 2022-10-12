@@ -1,9 +1,4 @@
 describe('POST /characters', () => {
-  before(() => {
-    cy.back2ThePast();
-    cy.setToken();
-  });
-
   it('deve cadastrar um personagem', () => {
     const character = {
       name: 'Professor Xavier',

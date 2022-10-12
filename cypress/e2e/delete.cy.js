@@ -6,11 +6,6 @@ describe("DELETE /characters/id", () => {
       active: true,
     };
   
-    before(() => {
-      cy.back2ThePast();
-      cy.setToken();
-    });
-  
     context("Quando tenho um personagem cadastrado", () => {
       before(() => {
         cy.postCharacter(tochaHumana).then((response) => {

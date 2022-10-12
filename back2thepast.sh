@@ -1,0 +1,1 @@
+curl --location --request DELETE 'https://marvel-qa-cademy.herokuapp.com/back2thepast/633b15676c35b200161dc5a4'

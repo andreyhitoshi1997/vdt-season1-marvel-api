@@ -4,7 +4,8 @@
   "description": "<h1 align=\"left\">     <img src=\".github/logo-stiker.svg\" width=\"250px\"> </h1>",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "back2thepast":"sh ./back2thepast.sh",
+    "test": "npm run back2thepast && npx cypress run"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "devDependencies": {
     "@bahmutov/cy-api": "^2.2.0",
     "cypress": "^10.9.0"
+  },
+  "dependencies": {
+    "curl": "^0.1.4"
   }
 }

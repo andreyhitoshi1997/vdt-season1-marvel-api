@@ -22,7 +22,6 @@ describe("GET /character", () => {
 
   before(() => {
     cy.back2ThePast();
-    cy.setToken();
     cy.populateCharacters(characters);
   });
 
@@ -52,11 +51,6 @@ describe("GET /character/id", () => {
     team: ["Vingadores"],
     active: true,
   };
-
-  before(() => {
-    cy.back2ThePast();
-    cy.setToken();
-  });
 
   context("Quando tenho um personagem cadastrado", () => {
     before(() => {
