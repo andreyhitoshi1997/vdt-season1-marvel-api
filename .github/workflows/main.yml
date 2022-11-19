@@ -13,14 +13,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: 'UI Tests - Chrome'
+      - name: 'Backend Tests'
         uses: cypress-io/github-action@v2
         with:
-          install-command: npm install && npm test
+          install-command: yarn install
           config-file: cypress.config.js
           wait-on: ${{ secrets.BASE_URL }}
           wait-on-timeout: 120
-          browser: chrome
           record: true
           group: 'UI - Chrome'
           spec: cypress/e2e/*
