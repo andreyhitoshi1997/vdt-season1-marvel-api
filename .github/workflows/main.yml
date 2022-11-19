@@ -20,7 +20,7 @@ jobs:
           config-file: cypress.config.js
           wait-on: ${{ secrets.BASE_URL }}
           wait-on-timeout: 120
-          group: 'Backend Tests'
+          group: 'UI - Chrome'
           spec: cypress/e2e/*
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
@@ -35,7 +35,7 @@ jobs:
           wait-on: ${{ secrets.BASE_URL }}
           wait-on-timeout: 120
           record: true
-          group: 'Backend Tests'
+          group: 'UI - Chrome'
           spec: cypress/e2e/*
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
